@@ -44,7 +44,6 @@
              ================================================================ -->
         <section class="page-hero">
             <div class="container fade-up">
-                <span class="page-hero-label">The Dosa Craft Story</span>
                 <h1 class="page-hero-title">A Fusion of <span class="highlight">Authenticity</span><br>&amp; Innovation
                 </h1>
                 <p class="page-hero-subtitle">Reinventing a South Indian staple — combining time-honoured flavours with
@@ -101,7 +100,13 @@
                 <div class="vision-mission-grid" style="margin-top: 3rem;">
                     <!-- Vision -->
                     <div class="vm-card fade-up">
-                        <div class="glass-icon">🔭</div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none"
+                            stroke="var(--clr-accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                            style="margin-bottom: 1.5rem;" class="lucide lucide-eye">
+                            <path
+                                d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0" />
+                            <circle cx="12" cy="12" r="3" />
+                        </svg>
                         <h3 class="vm-title">Our Vision</h3>
                         <p style="font-size: 1.1rem; line-height: 1.8; color: var(--clr-text);">To build a globally
                             recognised dosa brand that delivers exceptional taste, quality, and customer experience —
@@ -113,7 +118,13 @@
 
                     <!-- Mission -->
                     <div class="vm-card fade-up" style="transition-delay: 0.1s;">
-                        <div class="glass-icon">🎯</div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none"
+                            stroke="var(--clr-accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                            style="margin-bottom: 1.5rem;" class="lucide lucide-target">
+                            <circle cx="12" cy="12" r="10" />
+                            <circle cx="12" cy="12" r="6" />
+                            <circle cx="12" cy="12" r="2" />
+                        </svg>
                         <h3 class="vm-title">Our Mission</h3>
                         <ul class="about-list highlight-list" style="margin-top: 0.5rem;">
                             <li>Serve innovative South Indian fusion dishes</li>
@@ -186,16 +197,15 @@
                 <div class="footer-social-column">
                     <h4 class="footer-column-title">Follow Us</h4>
                     <div class="footer-socials">
-                        <a href="#">Instagram</a>
-                        <a href="#">Facebook</a>
-                        <a href="#">YouTube</a>
+                        <a href="#" target="_blank" rel="noopener noreferrer">Instagram</a>
+                        <a href="#" target="_blank" rel="noopener noreferrer">Facebook</a>
+                        <a href="https://linkedin.com/company/asellus" target="_blank"
+                            rel="noopener noreferrer">LinkedIn</a>
                     </div>
                 </div>
-                <div class="footer-contact">
-                    <h4 class="footer-column-title">Visit Us</h4>
-                    <p>Near Palasia Square, AB Road<br>Indore, MP 452001</p>
-                    <p>Mon - Sun: 11:00 AM - 11:00 PM</p>
-                    <p>+91 731 250 1234</p>
+                <div class="footer-directions">
+                    <button class="btn btn-primary" onclick="openDirectionsPopup(event)"
+                        style="padding: 0.8rem 1.5rem; font-size: 0.95rem; margin-top: 2rem;">Get Directions</button>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -203,6 +213,26 @@
             </div>
         </div>
     </footer>
+
+    <!-- Directions Popup -->
+    <div id="directions-popup" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeDirectionsPopup()">&times;</button>
+            <h3
+                style="color: var(--clr-primary); margin-bottom: 1rem; font-family: var(--font-heading); text-transform: uppercase;">
+                Select Outlet</h3>
+            <p style="margin-bottom: 1.5rem; color: var(--clr-text-light); line-height: 1.5;">Choose a Dosa Craft
+                location to get directions:</p>
+            <div class="modal-buttons" style="display: flex; flex-direction: column; gap: 1rem;">
+                <a href="https://maps.google.com/?q=Palasia+Square,Indore" target="_blank" rel="noopener noreferrer"
+                    class="btn btn-secondary w-100" style="justify-content: center;">Indore - Palasia</a>
+                <a href="https://maps.google.com/?q=Vijay+Nagar,Indore" target="_blank" rel="noopener noreferrer"
+                    class="btn btn-secondary w-100" style="justify-content: center;">Indore - Vijay Nagar</a>
+                <a href="https://maps.google.com/?q=Bhanwarkuan,Indore" target="_blank" rel="noopener noreferrer"
+                    class="btn btn-secondary w-100" style="justify-content: center;">Indore - Bhanwarkuan</a>
+            </div>
+        </div>
+    </div>
 
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>

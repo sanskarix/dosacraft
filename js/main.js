@@ -67,51 +67,56 @@ class SiteAnimations {
         const dosaVector = document.getElementById('dosa-vector');
         const floaters = document.querySelectorAll('.floating-decor');
 
-        // Prevent scrolling while loading
-        document.body.style.overflow = 'hidden';
+        const hasLoadedBefore = sessionStorage.getItem('dc_loaded');
 
-        const initTl = gsap.timeline({
-            defaults: { ease: "power4.out" },
-            onComplete: () => {
-                document.body.style.overflow = ''; // Restore scroll
-            }
-        });
+        if (!hasLoadedBefore && loaderBar && pageLoader) {
+            // First visit in this browser session — show the full loader
+            sessionStorage.setItem('dc_loaded', '1');
+            document.body.style.overflow = 'hidden';
 
-        // 1a. Loader Progress Bar
-        if (loaderBar && pageLoader) {
+            const initTl = gsap.timeline({
+                defaults: { ease: "power4.out" },
+                onComplete: () => {
+                    document.body.style.overflow = '';
+                }
+            });
+
+            // 1a. Loader Progress Bar
             initTl.to(loaderBar, { width: '100%', duration: 1, ease: "power2.inOut" })
                 .to(pageLoader, {
                     yPercent: -100,
                     duration: 1,
                     ease: "power4.inOut"
                 }, "+=0.2");
-        }
 
-        // 1b. Reveal Hero Elements
-        const heroElements = [heroTitle, heroSubtitle, heroCta].filter(Boolean);
-        if (heroElements.length > 0) {
-            initTl.to(heroElements, {
-                y: 0,
-                opacity: 1,
-                duration: 1.2,
-                stagger: 0.15,
-            }, "-=0.5"); // Start bringing text up as loader slides away
-        }
-        if (dosaVector) {
-            initTl.fromTo(dosaVector,
-                { y: 150, opacity: 0, scale: 0.8 },
-                { y: 0, opacity: 1, scale: 1, duration: 1.5, ease: "back.out(1.2)" },
-                "-=1.2"
-            );
-        }
-        if (floaters.length > 0) {
-            initTl.to(floaters, {
-                opacity: 1,
-                y: -20,
-                duration: 1,
-                stagger: 0.2,
-                ease: "power2.out"
-            }, "-=1");
+            // 1b. Reveal Hero Elements
+            const heroElements = [heroTitle, heroSubtitle, heroCta].filter(Boolean);
+            if (heroElements.length > 0) {
+                initTl.to(heroElements, {
+                    y: 0, opacity: 1, duration: 1.2, stagger: 0.15,
+                }, "-=0.5");
+            }
+            if (dosaVector) {
+                initTl.fromTo(dosaVector,
+                    { y: 150, opacity: 0, scale: 0.8 },
+                    { y: 0, opacity: 1, scale: 1, duration: 1.5, ease: "back.out(1.2)" },
+                    "-=1.2"
+                );
+            }
+            if (floaters.length > 0) {
+                initTl.to(floaters, {
+                    opacity: 1, y: -20, duration: 1, stagger: 0.2, ease: "power2.out"
+                }, "-=1");
+            }
+        } else {
+            // Subsequent visits — instantly hide loader and show hero
+            if (pageLoader) pageLoader.style.display = 'none';
+            document.body.style.overflow = '';
+
+            const heroElements = [heroTitle, heroSubtitle, heroCta].filter(Boolean);
+            gsap.set(heroElements, { y: 0, opacity: 1 });
+            if (dosaVector) gsap.set(dosaVector, { y: 0, opacity: 1, scale: 1 });
+            if (floaters.length > 0) gsap.set(floaters, { opacity: 1, y: -20 });
         }
 
         // 2. True Multi-Layer Scroll Parallax
@@ -297,6 +302,7 @@ class SiteAnimations {
 
         const outlets = {
             palasia: {
+                name: "Indore - Palasia",
                 address: "Near Palasia Square, AB Road<br>Indore, Madhya Pradesh 452001",
                 hours: "Monday - Sunday<br>11:00 AM - 11:00 PM",
                 phone: "+91 731 250 1234",
@@ -304,6 +310,7 @@ class SiteAnimations {
                 mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3680.1766741959!2d75.8655!3d22.7196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962fd001f4d0001%3A0x0!2sPalasia%20Square%2C%20Indore%2C%20Madhya%20Pradesh!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
             },
             vijaynagar: {
+                name: "Indore - Vijay Nagar",
                 address: "Scheme No 54, Vijay Nagar<br>Indore, Madhya Pradesh 452010",
                 hours: "Monday - Sunday<br>10:00 AM - 11:30 PM",
                 phone: "+91 731 250 5678",
@@ -311,6 +318,7 @@ class SiteAnimations {
                 mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3679.5!2d75.895!3d22.755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sVijay%20Nagar%2C%20Indore!5e0!3m2!1sen!2sin!4v1700000000001!5m2!1sen!2sin"
             },
             bhanwarkuan: {
+                name: "Indore - Bhanwarkuan",
                 address: "Bhanwarkuan Main Road<br>Indore, Madhya Pradesh 452001",
                 hours: "Tuesday - Sunday<br>11:00 AM - 10:30 PM",
                 phone: "+91 731 250 9012",
@@ -325,6 +333,7 @@ class SiteAnimations {
         const phoneLinkEl = document.getElementById('contact-phone-link');
         const waLinkEl = document.getElementById('contact-wa-link');
         const mapEl = document.getElementById('contact-map');
+        const nameEl = document.getElementById('contact-outlet-name');
 
         outletBtns.forEach(btn => {
             btn.addEventListener('click', () => {
@@ -334,18 +343,20 @@ class SiteAnimations {
                 const data = outlets[btn.getAttribute('data-outlet')];
 
                 // Animate content change
-                gsap.to([addressEl, hoursEl, phoneEl], {
+                gsap.to([addressEl, hoursEl, phoneEl, nameEl], {
                     opacity: 0,
                     y: 10,
                     duration: 0.2,
                     onComplete: () => {
-                        addressEl.innerHTML = data.address;
-                        hoursEl.innerHTML = data.hours;
-                        phoneEl.innerHTML = `📞 ${data.phone}`;
-                        phoneLinkEl.href = `tel:${data.phoneLink}`;
-                        waLinkEl.href = `https://wa.me/${data.phoneLink.replace('+', '')}`;
+                        if (nameEl) nameEl.textContent = data.name;
+                        if (addressEl) addressEl.innerHTML = data.address;
+                        if (hoursEl) hoursEl.innerHTML = data.hours;
+                        const phoneSpan = document.getElementById('contact-phone');
+                        if (phoneSpan) phoneSpan.textContent = data.phone;
+                        if (phoneLinkEl) phoneLinkEl.href = `tel:${data.phoneLink}`;
+                        if (waLinkEl) waLinkEl.href = `https://wa.me/${data.phoneLink.replace('+', '')}`;
 
-                        gsap.to([addressEl, hoursEl, phoneEl], {
+                        gsap.to([addressEl, hoursEl, phoneSpan, nameEl].filter(Boolean), {
                             opacity: 1,
                             y: 0,
                             duration: 0.3
@@ -353,8 +364,8 @@ class SiteAnimations {
                     }
                 });
 
-                // Update map instantly
-                mapEl.src = data.mapSrc;
+                // Update map instantly if exists
+                if (mapEl) mapEl.src = data.mapSrc;
             });
         });
     }
@@ -375,6 +386,30 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
+
+// Global Modal Functions
+window.openDirectionsPopup = function (e) {
+    if (e) e.preventDefault();
+    const popup = document.getElementById('directions-popup');
+    if (popup) {
+        popup.classList.add('active');
+    }
+};
+
+window.closeDirectionsPopup = function (e) {
+    const popup = document.getElementById('directions-popup');
+    if (popup) {
+        popup.classList.remove('active');
+    }
+};
+
+// Close modal when clicking outside
+document.addEventListener('click', function (event) {
+    const popup = document.getElementById('directions-popup');
+    if (popup && event.target === popup) {
+        closeDirectionsPopup();
+    }
+});
 
 // Initialize when DOM is fully loaded
 document.addEventListener('DOMContentLoaded', () => {
