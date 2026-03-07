@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu | Dosa Craft - Artisanal Dosas in Indore</title>
+    <meta name="description"
+        content="Explore the Dosa Craft menu featuring classic sada dosas, masala dosas, chef's signature creations, children's specials, Jain specials, and uttapam.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Oswald:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header header-scrolled">
+        <div class="header-container">
+            <a href="index.html" class="logo">Dosa Craft</a>
+            <div class="burger-menu" id="burger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav class="nav-links" id="nav-links">
+                <a href="index.html">Home</a>
+                <a href="menu.html" class="active">Menu</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact Us</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="inner-page">
+        <!-- Menu Header -->
+        <section class="page-heading">
+            <div class="container fade-up">
+                <h1 class="hero-title pt-100">Our Menu</h1>
+                <p class="hero-subtitle dark">Dosa Craft offers a wide variety of dosa dishes that combine traditional
+                    recipes with modern fusion ideas.</p>
+            </div>
+        </section>
+
+        <!-- Category Filter -->
+        <section class="menu-filter-section">
+            <div class="container">
+                <div class="category-filters" id="category-filters">
+                    <button class="filter-btn active" data-category="all">All</button>
+                    <button class="filter-btn" data-category="classic-sada">Classic Sada</button>
+                    <button class="filter-btn" data-category="masala">Masala Dosa</button>
+                    <button class="filter-btn" data-category="children">Children's</button>
+                    <button class="filter-btn" data-category="chefs-choice">Chef's Choice</button>
+                    <button class="filter-btn" data-category="new-in-town">New in Town</button>
+                    <button class="filter-btn" data-category="jain">Jain Specials</button>
+                    <button class="filter-btn" data-category="uttapam">Uttapam</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu Content -->
+        <section class="menu-section fade-up">
+            <div class="container menu-container">
+
+                <!-- Classic Sada Dosa -->
+                <div class="menu-category" data-category="classic-sada">
+                    <div class="category-header">
+                        <h2 class="category-title">Classic Sada Dosa</h2>
+                        <div class="category-image">
+                            <img src="assets/images/masala-dosa.png" alt="Classic Sada Dosa">
+                        </div>
+                    </div>
+                    <ul class="menu-list">
+                        <li class="menu-item">
+                            <div class="menu-item-info">
+                                <h3 class="menu-item-name">Butter Sada Dosa</h3>
+                            </div>
+                            <span class="menu-item-price">₹50</span>
+                        </li>
+                        <li class="menu-item">
+                            <div class="menu-item-info">
+                                <h3 class="menu-item-name">Onion Sada Dosa</h3>
+                            </div>
+                            <span class="menu-item-price">₹70</span>
+                        </li>
+                        <li class="menu-item">
+                            <div class="menu-item-info">
+                                <h3 class="menu-item-name">Schezwan Sada Dosa</h3>
+                            </div>
+                            <span class="menu-item-price">₹80</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Masala Dosa -->
+                <div class="menu-category" data-category="masala">
+                    <div class="category-header">
+                        <h2 class="category-title">Masala Dosa</h2>
+                        <div class="category-image">
+                            <img src="assets/images/mysore-dosa.png" alt="Masala Dosa">
+                        </div>
+                    </div>
+                    <ul class="menu-list">
+                        <li class="menu-item">
+                            <div class="menu-item-info">
+                                <h3 class="menu-item-name">Masala Dosa <span class="tag">Popular</span></h3>
+                            </div>
+                            <span class="menu-item-price">₹100</span>
+                        </li>
+                        <li class="menu-item">
+                            <div class="menu-item-info">
+                                <h3 class="menu-item-name">Schezwan Masala Dosa</h3>
+                            </div>
+                            <span class="menu-item-price">₹120</span>
+                        </li>
+                        <li class="menu-item">
+                            <div class="menu-item-info">
+                                <h3 class="menu-item-name">Mysore Masala Dosa</h3>
+                            </div>
+                            <span class="menu-item-price">₹180</span>
+                        </li>
+                        <li class="menu-item">
+                            <div class="menu-item-info">
+                                <h3 class="menu-item-name">Paneer Masala Dosa</h3>
+                            </div>
+                            <span class="menu-item-price">₹200</span>
+                        </li>
+                        <li class="menu-item">
+                            <div class="menu-item-info">
+                                <h3 class="menu-item-name">Cheese Masala Dosa</h3>
+                            </div>
+                            <span class="menu-item-price">₹200</span>
+                        </li>
+                        <li class="menu-item">
+                            <div class="menu-item-info">
+                                <h3 class="menu-item-name">Schezwan Cheese Masala Dosa</h3>
+                            </div>
+                            <span class="menu-item-price">₹220</span>
+                        </li>
+                        <li class="menu-item">
+                            <div class="menu-item-info">
+                                <h3 class="menu-item-name">Cheese Paneer Masala Dosa</h3>
+                            </div>
+                            <span class="menu-item-price">₹250</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Children's Special -->
+                <div class="menu-category" data-category="children">
+                    <div class="category-header">
+                        <h2 class="category-title">Children's Special</h2>
+                        <div class="category-image">
+                            <img src="assets/images/chocolate-dosa.png" alt="Children's Special Dosa">
+                        </div>
+                    </div>
+                    <ul class="menu-list">
+                        <li class="menu-item">
+                            <div class="menu-item-info">
+                                <h3 class="menu-item-name">Paneer Sada Dosa</h3>
+                            </div>
+                            <span class="menu-item-price">₹160</span>
+                        </li>
+                        <li class="menu-item">
+                            <div class="menu-item-info">
+                                <h3 class="menu-item-name">Cheese Sada Dosa</h3>
+                            </div>
+                            <span class="menu-item-price">₹180</span>
+                        </li>
+                        <li class="menu-item">
+                            <div class="menu-item-info">
+                                <h3 class="menu-item-name">Maggi Dosa</h3>
+                            </div>
+                            <span class="menu-item-price">₹220</span>
+                        </li>
+                        <li class="menu-item">
+                            <div class="menu-item-info">
+                                <h3 class="menu-item-name">Chocolate Dosa <span class="tag">Kids Fav</span></h3>
+                            </div>
+                            <span class="menu-item-price">₹250</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Chef's Choice (Signature Dosas) -->
+                <div class="menu-category" data-category="chefs-choice">
+                    <div class="category-header">
+                        <h2 class="category-title">Chef's Choice <span class="category-subtitle">(Signature
+                                Dosas)</span></h2>
+                        <div class="category-image">
+                            <img src="assets/images/spring-roll-dosa.png" alt="Chef's Choice Signature Dosa">
+                        </div>
+                    </div>
+                    <ul class="menu-list">
+                        <li class="menu-item">
+                            <div class="menu-item-info">
+                                <h3 class="menu-item-name">Spring Roll Dosa <span class="tag">Signature</span></h3>
+                            </div>
+                            <span class="menu-item-price">₹240</span>
+                        </li>
+                        <li class="menu-item">
+                            <div class="menu-item-info">
+                                <h3 class="menu-item-name">Chinese Chopsy Dosa</h3>
+                            </div>
+                            <span class="menu-item-price">₹240</span>
+                        </li>
+                        <li class="menu-item">
+                            <div class="menu-item-info">
+                                <h3 class="menu-item-name">Jinni Dosa</h3>
+                            </div>
+                            <span class="menu-item-price">₹250</span>
+                        </li>
+                        <li class="menu-item">
+                            <div class="menu-item-info">
+                                <h3 class="menu-item-name">Indorie Dosa</h3>
+                            </div>
+                            <span class="menu-item-price">₹250</span>
+                        </li>
+                        <li class="menu-item">
+                            <div class="menu-item-info">
+                                <h3 class="menu-item-name">Open Cheese Mysor Dosa</h3>
+                            </div>
+                            <span class="menu-item-price">₹270</span>
+                        </li>
+                        <li class="menu-item">
+                            <div class="menu-item-info">
+                                <h3 class="menu-item-name">Butter Paneer Dosa</h3>
+                            </div>
+                            <span class="menu-item-price">₹300</span>
+                        </li>
+                        <li class="menu-item">
+                            <div class="menu-item-info">
+                                <h3 class="menu-item-name">Pav Bhaji Dosa</h3>
+                            </div>
+                            <span class="menu-item-price">₹300</span>
+                        </li>
+                        <li class="menu-item">
+                            <div class="menu-item-info">
+                                <h3 class="menu-item-name">Cheese Volcano <span class="tag">Must Try</span></h3>
+                            </div>
+                            <span class="menu-item-price">₹300</span>
+                        </li>
+                        <li class="menu-item">
+                            <div class="menu-item-info">
+                                <h3 class="menu-item-name">Pizza Dosa</h3>
+                            </div>
+                            <span class="menu-item-price">₹350</span>
+                        </li>
+                        <li class="menu-item">
+                            <div class="menu-item-info">
+                                <h3 class="menu-item-name">Corn Cheese Dosa</h3>
+                            </div>
+                            <span class="menu-item-price">₹350</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- New in Town (Special Creations) -->
+                <div class="menu-category" data-category="new-in-town">
+                    <div class="category-header">
+                        <h2 class="category-title">New in Town <span class="category-subtitle">(Special
+                                Creations)</span></h2>
+                        <div class="category-image">
+                            <img src="assets/images/cheese-volcano.png" alt="Special Creations">
+                        </div>
+                    </div>
+                    <ul class="menu-list">
+                        <li class="menu-item">
+                            <div class="menu-item-info">
+                                <h3 class="menu-item-name">Kashmiri Dosa</h3>
+                            </div>
+                            <span class="menu-item-price">₹250</span>
+                        </li>
+                        <li class="menu-item">
+                            <div class="menu-item-info">
+                                <h3 class="menu-item-name">Mia Khalifa</h3>
+                            </div>
+                            <span class="menu-item-price">₹300</span>
+                        </li>
+                        <li class="menu-item">
+                            <div class="menu-item-info">
+                                <h3 class="menu-item-name">Mayo Lays Dosa</h3>
+                            </div>
+                            <span class="menu-item-price">₹300</span>
+                        </li>
+                        <li class="menu-item">
+                            <div class="menu-item-info">
+                                <h3 class="menu-item-name">Matka Blast <span class="tag">New</span></h3>
+                            </div>
+                            <span class="menu-item-price">₹400</span>
+                        </li>
+                        <li class="menu-item">
+                            <div class="menu-item-info">
+                                <h3 class="menu-item-name">Burj Khalifa <span class="tag">Premium</span></h3>
+                            </div>
+                            <span class="menu-item-price">₹450</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Jain Specials -->
+                <div class="menu-category" data-category="jain">
+                    <div class="category-header">
+                        <h2 class="category-title">Jain Specials</h2>
+                        <div class="category-image">
+                            <img src="assets/images/paneer-dosa.png" alt="Jain Special Dosa">
+                        </div>
+                    </div>
+                    <ul class="menu-list">
+                        <li class="menu-item">
+                            <div class="menu-item-info">
+                                <h3 class="menu-item-name">Jain Paneer Jinny Dosa</h3>
+                            </div>
+                            <span class="menu-item-price">₹160</span>
+                        </li>
+                        <li class="menu-item">
+                            <div class="menu-item-info">
+                                <h3 class="menu-item-name">Jain Jinny Dosa</h3>
+                            </div>
+                            <span class="menu-item-price">₹250</span>
+                        </li>
+                        <li class="menu-item">
+                            <div class="menu-item-info">
+                                <h3 class="menu-item-name">Jain Butter Paneer Dosa</h3>
+                            </div>
+                            <span class="menu-item-price">₹300</span>
+                        </li>
+                        <li class="menu-item">
+                            <div class="menu-item-info">
+                                <h3 class="menu-item-name">Jain Corn Cheese Dosa</h3>
+                            </div>
+                            <span class="menu-item-price">₹350</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Uttapam -->
+                <div class="menu-category" data-category="uttapam">
+                    <div class="category-header">
+                        <h2 class="category-title">Uttapam</h2>
+                        <div class="category-image">
+                            <img src="assets/images/uttapam.png" alt="Uttapam">
+                        </div>
+                    </div>
+                    <ul class="menu-list">
+                        <li class="menu-item">
+                            <div class="menu-item-info">
+                                <h3 class="menu-item-name">Sada Uttapam</h3>
+                            </div>
+                            <span class="menu-item-price">₹200</span>
+                        </li>
+                        <li class="menu-item">
+                            <div class="menu-item-info">
+                                <h3 class="menu-item-name">Tomato Uttapam</h3>
+                            </div>
+                            <span class="menu-item-price">₹240</span>
+                        </li>
+                        <li class="menu-item">
+                            <div class="menu-item-info">
+                                <h3 class="menu-item-name">Onion Uttapam</h3>
+                            </div>
+                            <span class="menu-item-price">₹250</span>
+                        </li>
+                        <li class="menu-item">
+                            <div class="menu-item-info">
+                                <h3 class="menu-item-name">Tomato Onion Uttapam</h3>
+                            </div>
+                            <span class="menu-item-price">₹250</span>
+                        </li>
+                        <li class="menu-item">
+                            <div class="menu-item-info">
+                                <h3 class="menu-item-name">Pizza Uttapam with Cheese</h3>
+                            </div>
+                            <span class="menu-item-price">₹250</span>
+                        </li>
+                        <li class="menu-item">
+                            <div class="menu-item-info">
+                                <h3 class="menu-item-name">Masala Uttapam</h3>
+                            </div>
+                            <span class="menu-item-price">₹280</span>
+                        </li>
+                        <li class="menu-item">
+                            <div class="menu-item-info">
+                                <h3 class="menu-item-name">Mysore Uttapam</h3>
+                            </div>
+                            <span class="menu-item-price">₹350</span>
+                        </li>
+                        <li class="menu-item">
+                            <div class="menu-item-info">
+                                <h3 class="menu-item-name">Veg Uttapam</h3>
+                            </div>
+                            <span class="menu-item-price">₹350</span>
+                        </li>
+                        <li class="menu-item">
+                            <div class="menu-item-info">
+                                <h3 class="menu-item-name">Corn Paneer Uttapam</h3>
+                            </div>
+                            <span class="menu-item-price">₹350</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Menu Note -->
+                <div class="menu-note">
+                    <p>🧈 <strong>Note:</strong> All preparations are made using Amul Butter.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Menu CTA -->
+        <section class="menu-cta fade-up">
+            <div class="container text-center">
+                <h2 class="section-title">Ready to Order?</h2>
+                <p class="cta-subtitle">Each dish is designed to deliver a balance of taste, texture, and presentation.
+                </p>
+                <a href="contact.html" class="btn btn-primary">Contact Us to Order</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-brand">
+                    <h3 class="footer-logo">Dosa Craft</h3>
+                    <p class="footer-tagline">Reinventing traditional dosa by combining authentic South Indian flavors
+                        with modern culinary craft.</p>
+                </div>
+                <div class="footer-links">
+                    <h4 class="footer-column-title">Explore</h4>
+                    <div class="footer-nav">
+                        <a href="index.html">Home</a>
+                        <a href="menu.html">Menu</a>
+                        <a href="about.html">About Us</a>
+                        <a href="contact.html">Contact Us</a>
+                    </div>
+                </div>
+                <div class="footer-social-column">
+                    <h4 class="footer-column-title">Follow Us</h4>
+                    <div class="footer-socials">
+                        <a href="#">Instagram</a>
+                        <a href="#">Facebook</a>
+                        <a href="#">YouTube</a>
+                    </div>
+                </div>
+                <div class="footer-contact">
+                    <h4 class="footer-column-title">Visit Us</h4>
+                    <p>Near Palasia Square, AB Road<br>Indore, MP 452001</p>
+                    <p>Mon - Sun: 11:00 AM - 11:00 PM</p>
+                    <p>+91 731 250 1234</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copy">&copy; 2026 Dosa Craft. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

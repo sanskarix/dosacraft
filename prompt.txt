@@ -1,0 +1,24 @@
+# On the home page:
+1. cursor responsiveness of the parallax effect should only be applicable to the dosa image not the text. 
+2. Improve the spinning rangoli effects as its not looking like it, create a mandala drawing that lokoks indian. 
+3. Remove generic emojis from "What Makes Dosa Craft Unique" and eplace it with theme-consistent icons.
+4. Add another box under the "What Makes Dosa Craft Unique" section as its 5 right now and looking bad and misaligned.
+5. Move the Signature platters above the Our Story block. 
+6. Generate some more reviews as its not finishing the line. Be innovative with this section as its not looking good right now. 
+
+# Footer:
+7. Redesign the footer to match the south indian aesthetic with good placement and spacing. 
+
+#About us:
+8. Improve the page structure
+9. Remove the obvious "About Us" heading. 
+10. A lot of text content is there and sections are not distinguishable and hard to read, over all the page isn't looking good. Don't bombard it with content but make sure the core message is clear. 
+
+#Contact:
+11. The page is looking very messed up, fix it. 
+
+#Overall (Priority):
+
+12. Make the website look a little more premium without hindering the theme, it should not look generic or low quality work something that's already common. 
+13. Improve spacing and font sizes throughout all pages. 
+14. Improve the Indian theme of the website

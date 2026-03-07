@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dosa Craft - Artisanal Dosas in Indore | South Indian Fusion Cuisine</title>
+    <meta name="description"
+        content="Dosa Craft is a South Indian fusion food brand based in Indore, India. Reinventing traditional dosa with authentic flavors and modern culinary ideas.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Oswald:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <!-- Initial Page Loader -->
+    <div class="page-loader" id="page-loader">
+        <div class="loader-logo">Dosa Craft</div>
+        <div class="loader-progress">
+            <div class="loader-bar" id="loader-bar"></div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <a href="index.html" class="logo">Dosa Craft</a>
+            <div class="burger-menu" id="burger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav class="nav-links" id="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="menu.html">Menu</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact Us</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Pinned Hero Section -->
+        <section class="hero-pinned-wrapper">
+            <!-- Hero Container set to relative for parallax bounds -->
+            <div class="hero" id="hero">
+                <!-- Ambient Background Effects (Slowest movement) -->
+                <div class="ambient-glow glow-1 gs-parallax" data-speed="0.2"></div>
+                <div class="ambient-glow glow-2 gs-parallax" data-speed="0.1"></div>
+                <div class="ambient-glow glow-3 gs-parallax" data-speed="0.15"></div>
+
+                <!-- Hero Text (Midground, normal slight parallax) -->
+                <div class="hero-content gs-parallax" data-speed="0.4">
+                    <div class="text-reveal-mask">
+                        <h1 class="hero-title">The Art of <span class="highlight">Dosa Craft</span></h1>
+                    </div>
+                    <div class="text-reveal-mask mt-1">
+                        <p class="hero-subtitle">Reinventing traditional dosa by combining authentic South Indian
+                            flavors with modern and creative culinary ideas.</p>
+                    </div>
+                    <div class="hero-cta text-reveal-mask mt-2">
+                        <a href="menu.html" class="btn btn-primary">Explore Menu</a>
+                        <a href="contact.html" class="btn btn-secondary">Book Table</a>
+                    </div>
+                </div>
+
+                <!-- Dosa Vector (Foreground, fast upward movement) -->
+                <div class="hero-visual gs-parallax" data-speed="0.9">
+                    <img src="assets/images/dosa1.svg" alt="Dosa Craft Illustration" class="dosa-vector"
+                        id="dosa-vector"
+                        onerror="this.src='https://placehold.co/800x600/1e7b4c/ffffff?text=Dosa+Craft'">
+                </div>
+
+                <!-- Floating Decor Elements (South Indian Motifs) -->
+                <div class="floating-decor float-1 gs-parallax" data-speed="0.7">🥥</div>
+                <div class="floating-decor float-2 gs-parallax" data-speed="-0.3">🌶️</div>
+                <div class="floating-decor float-3 gs-parallax" data-speed="0.6">🍃</div>
+            </div>
+        </section>
+
+        <!-- Traditional Cultural Divider -->
+        <div class="traditional-divider"></div>
+
+        <!-- What Makes Dosa Craft Unique Section -->
+        <section class="features-section py-100">
+            <div class="container text-center fade-up">
+                <h2 class="section-title">What Makes Dosa Craft Unique</h2>
+                <p class="section-intro">Several factors distinguish Dosa Craft from traditional dosa restaurants.</p>
+            </div>
+            <div class="container features-grid mt-4">
+                <!-- Feature 1 -->
+                <div class="feature-card fade-up">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="32"
+                            height="32">
+                            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Fusion Innovation</h3>
+                    <p class="feature-desc">Dosa Craft introduces creative dosa varieties inspired by different cuisines
+                        and flavors.</p>
+                </div>
+                <!-- Feature 2 -->
+                <div class="feature-card fade-up" style="transition-delay: 0.1s;">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="32"
+                            height="32">
+                            <path d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Variety</h3>
+                    <p class="feature-desc">The menu includes a wide range of dosa styles, from traditional classics to
+                        unique fusion dishes.</p>
+                </div>
+                <!-- Feature 3 -->
+                <div class="feature-card fade-up" style="transition-delay: 0.2s;">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="32"
+                            height="32">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                            <polyline points="22 4 12 14.01 9 11.01" />
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Consistency</h3>
+                    <p class="feature-desc">Standardized preparation methods help maintain consistent taste and quality.
+                    </p>
+                </div>
+                <!-- Feature 4 -->
+                <div class="feature-card fade-up" style="transition-delay: 0.3s;">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="32"
+                            height="32">
+                            <path
+                                d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Modern Presentation</h3>
+                    <p class="feature-desc">Food is designed to be visually appealing and exciting.</p>
+                </div>
+                <!-- Feature 5 -->
+                <div class="feature-card fade-up" style="transition-delay: 0.4s;">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Contemporary Dining</h3>
+                    <p class="feature-desc">Outlets are designed with a modern look and comfortable seating.</p>
+                </div>
+                <!-- Feature 6 (New) -->
+                <div class="feature-card fade-up" style="transition-delay: 0.5s;">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Authentic Ingredients</h3>
+                    <p class="feature-desc">We source premium local ingredients and prepare our craft batters fresh
+                        daily.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Food Carousel -->
+        <section class="food-carousel-section">
+            <div class="container fade-up">
+                <h2 class="section-title">Crafted with Passion</h2>
+            </div>
+            <div class="food-carousel" id="food-carousel">
+                <div class="carousel-track">
+                    <div class="carousel-slide">
+                        <img src="assets/images/masala-dosa.png" alt="Masala Dosa">
+                        <span class="carousel-label">Masala Dosa</span>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="assets/images/pizza-dosa.png" alt="Pizza Dosa">
+                        <span class="carousel-label">Pizza Dosa</span>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="assets/images/cheese-volcano.png" alt="Cheese Volcano">
+                        <span class="carousel-label">Cheese Volcano</span>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="assets/images/spring-roll-dosa.png" alt="Spring Roll Dosa">
+                        <span class="carousel-label">Spring Roll Dosa</span>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="assets/images/mysore-dosa.png" alt="Mysore Masala Dosa">
+                        <span class="carousel-label">Mysore Masala</span>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="assets/images/paneer-dosa.png" alt="Paneer Masala Dosa">
+                        <span class="carousel-label">Paneer Masala</span>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="assets/images/chocolate-dosa.png" alt="Chocolate Dosa">
+                        <span class="carousel-label">Chocolate Dosa</span>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="assets/images/uttapam.png" alt="Uttapam">
+                        <span class="carousel-label">Uttapam</span>
+                    </div>
+                    <!-- Duplicated for seamless loop -->
+                    <div class="carousel-slide">
+                        <img src="assets/images/masala-dosa.png" alt="Masala Dosa">
+                        <span class="carousel-label">Masala Dosa</span>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="assets/images/pizza-dosa.png" alt="Pizza Dosa">
+                        <span class="carousel-label">Pizza Dosa</span>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="assets/images/cheese-volcano.png" alt="Cheese Volcano">
+                        <span class="carousel-label">Cheese Volcano</span>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="assets/images/spring-roll-dosa.png" alt="Spring Roll Dosa">
+                        <span class="carousel-label">Spring Roll Dosa</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Signature Plates -->
+        <section class="signature-plates py-100 fade-up">
+            <div class="container">
+                <h2 class="section-title">Signature Plates</h2>
+                <div class="plates-grid">
+                    <!-- Plate 1 -->
+                    <div class="plate-card">
+                        <div class="plate-image-wrapper">
+                            <img src="assets/images/spring-roll-dosa.png" alt="Spring Roll Dosa">
+                        </div>
+                        <div class="plate-info">
+                            <h3 class="plate-name">Spring Roll Dosa</h3>
+                            <p class="plate-desc">A creative fusion dosa rolled into a spring roll shape, stuffed with
+                                fresh vegetables.</p>
+                            <span class="plate-price">₹240</span>
+                        </div>
+                    </div>
+                    <!-- Plate 2 -->
+                    <div class="plate-card">
+                        <div class="plate-image-wrapper">
+                            <img src="assets/images/pizza-dosa.png" alt="Pizza Dosa">
+                        </div>
+                        <div class="plate-info">
+                            <h3 class="plate-name">Pizza Dosa</h3>
+                            <p class="plate-desc">Crispy dosa topped with cheese, vegetables, and pizza sauce — a
+                                fusion masterpiece.</p>
+                            <span class="plate-price">₹350</span>
+                        </div>
+                    </div>
+                    <!-- Plate 3 -->
+                    <div class="plate-card">
+                        <div class="plate-image-wrapper">
+                            <img src="assets/images/cheese-volcano.png" alt="Cheese Volcano">
+                        </div>
+                        <div class="plate-info">
+                            <h3 class="plate-name">Cheese Volcano</h3>
+                            <p class="plate-desc">An explosive cheese-filled dosa with dramatic cheese pull — our most
+                                Instagrammable dish.</p>
+                            <span class="plate-price">₹300</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Story Teaser -->
+        <section class="story-section py-100">
+            <div class="container story-grid">
+                <div class="story-image fade-up">
+                    <img src="assets/images/dosa-crafting.png" alt="Dosa being crafted on a traditional tawa">
+                </div>
+                <div class="story-text fade-up">
+                    <h2 class="section-title left-align">Our Story</h2>
+                    <p>Dosa Craft was created with the idea of transforming a traditional South Indian staple into a
+                        modern food experience.</p>
+                    <p>Dosa has always been loved for its taste, versatility, and nutritional value. The idea behind
+                        Dosa
+                        Craft was to take this traditional dish and expand its possibilities by introducing new flavors,
+                        ingredients, and presentation styles.</p>
+                    <p>By blending tradition with creativity, Dosa Craft offers a new perspective on South Indian
+                        cuisine
+                        while still respecting its roots.</p>
+                    <p><strong>The brand represents a fusion of authenticity and innovation.</strong></p>
+                    <a href="about.html" class="btn btn-primary mt-2">Learn More</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quality & Taste Philosophy Teaser -->
+        <section class="philosophy-section py-100">
+            <div class="container philosophy-grid">
+                <div class="philosophy-text fade-up">
+                    <h2 class="section-title left-align">Quality & Taste Philosophy</h2>
+                    <p>Dosa Craft places strong emphasis on maintaining consistent quality and taste across all its food
+                        offerings.</p>
+                    <p>Food preparation is based on carefully developed recipes and standardized processes. This ensures
+                        that every dish maintains the same flavor and quality standards.</p>
+                    <ul class="philosophy-list">
+                        <li>Standardized recipes and preparation methods</li>
+                        <li>Consistent taste and quality</li>
+                        <li>Fresh ingredients</li>
+                        <li>Carefully designed food presentation</li>
+                    </ul>
+                    <p>The goal is to ensure that every customer enjoys a reliable and satisfying food experience.</p>
+                </div>
+                <div class="philosophy-image fade-up">
+                    <img src="assets/images/fresh-ingredients.png" alt="Fresh ingredients used at Dosa Craft">
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonials-section py-100" style="overflow-x: hidden;">
+            <div class="container">
+                <h2 class="section-title fade-up">What Our Guests Say</h2>
+            </div>
+
+            <div class="testimonials-marquee-wrapper fade-up">
+                <div class="testimonials-marquee">
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <p class="testimonial-text">"Best craft dosa ever! The Cheese Volcano is absolutely
+                            mind-blowing. The fusion flavors are unique yet so well balanced."</p>
+                        <div class="testimonial-author">— Priya S., Indore</div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <p class="testimonial-text">"The Spring Roll Dosa is unlike anything I've ever had. Dosa Craft
+                            has truly reinvented what a dosa can be. Every visit is a delight!"</p>
+                        <div class="testimonial-author">— Rahul M., Bhopal</div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <p class="testimonial-text">"From the ambiance to the food — everything screams quality and
+                            artisanal craft. My kids love the Chocolate Dosa. We come here every weekend!"</p>
+                        <div class="testimonial-author">— Anjali K., Indore</div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <p class="testimonial-text">"Finally, a place that brings innovation to traditional South Indian
+                            food without losing the authentic flavors. The Pav Bhaji Dosa is a must-try!"</p>
+                        <div class="testimonial-author">— Vikram D., Mumbai</div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <p class="testimonial-text">"The crispiness of the Paneer Masala Dosa is unmatched. I love the
+                            premium vibe of the place while authentic roots are kept alive."</p>
+                        <div class="testimonial-author">— Meera T., Delhi</div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <p class="testimonial-text">"Their presentation is out of this world. It's not just a meal, it's
+                            an entire culinary experience. The Jain selection is fantastic too."</p>
+                        <div class="testimonial-author">— Sneha R., Pune</div>
+                    </div>
+                    <!-- Duplicated for Marquee Effect -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <p class="testimonial-text">"Best craft dosa ever! The Cheese Volcano is absolutely
+                            mind-blowing. The fusion flavors are unique yet so well balanced."</p>
+                        <div class="testimonial-author">— Priya S., Indore</div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <p class="testimonial-text">"The Spring Roll Dosa is unlike anything I've ever had. Dosa Craft
+                            has truly reinvented what a dosa can be. Every visit is a delight!"</p>
+                        <div class="testimonial-author">— Rahul M., Bhopal</div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <p class="testimonial-text">"From the ambiance to the food — everything screams quality and
+                            artisanal craft. My kids love the Chocolate Dosa. We come here every weekend!"</p>
+                        <div class="testimonial-author">— Anjali K., Indore</div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <p class="testimonial-text">"Finally, a place that brings innovation to traditional South Indian
+                            food without losing the authentic flavors. The Pav Bhaji Dosa is a must-try!"</p>
+                        <div class="testimonial-author">— Vikram D., Mumbai</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Visit Us -->
+        <section id="visit-us" class="visit-us">
+            <div class="container visit-content">
+                <div class="visit-text fade-up">
+                    <h2 class="section-title">Visit Us</h2>
+                    <p class="visit-address">Near Palasia Square, AB Road<br>Indore, Madhya Pradesh 452001</p>
+                    <p class="visit-hours">Mon - Sun: 11:00 AM - 11:00 PM</p>
+                    <div class="visit-actions">
+                        <a href="tel:+917312501234" class="btn btn-primary">Call +91 731 250 1234</a>
+                        <a href="https://maps.google.com/?q=Palasia+Square,+Indore,+Madhya+Pradesh" target="_blank"
+                            rel="noopener noreferrer" class="btn btn-secondary">Get Directions</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-brand">
+                    <h3 class="footer-logo">Dosa Craft</h3>
+                    <p class="footer-tagline">Reinventing traditional dosa by combining authentic South Indian flavors
+                        with modern culinary craft.</p>
+                </div>
+                <div class="footer-links">
+                    <h4 class="footer-column-title">Explore</h4>
+                    <div class="footer-nav">
+                        <a href="index.html">Home</a>
+                        <a href="menu.html">Menu</a>
+                        <a href="about.html">About Us</a>
+                        <a href="contact.html">Contact Us</a>
+                    </div>
+                </div>
+                <div class="footer-social-column">
+                    <h4 class="footer-column-title">Follow Us</h4>
+                    <div class="footer-socials">
+                        <a href="#">Instagram</a>
+                        <a href="#">Facebook</a>
+                        <a href="#">YouTube</a>
+                    </div>
+                </div>
+                <div class="footer-contact">
+                    <h4 class="footer-column-title">Visit Us</h4>
+                    <p>Near Palasia Square, AB Road<br>Indore, MP 452001</p>
+                    <p>Mon - Sun: 11:00 AM - 11:00 PM</p>
+                    <p>+91 731 250 1234</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copy">&copy; 2026 Dosa Craft. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <!-- GSAP Core -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <!-- GSAP ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- Lenis Smooth Scroll -->
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+    <!-- Main JS -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
