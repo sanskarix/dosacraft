@@ -1108,21 +1108,116 @@ img {
    Inner Pages Common (Menu, About & Contact)
    ========================================================================== */
 .inner-page {
-    padding-top: 120px;
+    padding-top: 80px;
     min-height: calc(100vh - 300px);
 }
 
+/* ------------------------------------------------------------------
+   Shared Page Hero Banner — used by About, Menu, Contact pages
+   ------------------------------------------------------------------ */
+.page-hero {
+    background-color: var(--clr-bg-alt);
+    text-align: center;
+    padding: 6rem 0 5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Subtle kolam watermark behind hero text */
+.page-hero::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 600px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' width='600' height='600'%3E%3Cg stroke='%23D4AF37' fill='none' stroke-width='0.5' opacity='0.12'%3E%3Ccircle cx='100' cy='100' r='80'/%3E%3Ccircle cx='100' cy='100' r='60'/%3E%3Ccircle cx='100' cy='100' r='40'/%3E%3Ccircle cx='100' cy='100' r='90'/%3E%3Cpath d='M100 0 L100 200 M0 100 L200 100'/%3E%3Cpath d='M29.289 29.289 L170.71 170.71 M29.289 170.71 L170.71 29.289'/%3E%3C/g%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: contain;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.page-hero .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Small overline label above the page title */
+.page-hero-label {
+    display: inline-block;
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--clr-accent);
+    margin-bottom: 1rem;
+}
+
+/* The main H1 */
+.page-hero-title {
+    font-family: var(--font-heading);
+    font-size: clamp(2.8rem, 6vw, 4.5rem);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    color: var(--clr-secondary);
+    margin-bottom: 1.25rem;
+}
+
+.page-hero-title .highlight {
+    color: var(--clr-accent);
+}
+
+/* Subtitle paragraph */
+.page-hero-subtitle {
+    max-width: 620px;
+    margin: 0 auto;
+    font-size: 1.15rem;
+    color: var(--clr-text-light);
+    line-height: 1.75;
+}
+
+/* Bottom decorative border */
+.page-hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(to right, transparent, var(--clr-accent), var(--clr-primary), transparent);
+    opacity: 0.4;
+}
+
+/* Legacy .page-heading kept for fallback */
 .page-heading {
     text-align: center;
     padding: var(--space-lg) 0 var(--space-xl);
 }
 
-.pt-100 {
-    font-size: clamp(2.5rem, 6vw, 4rem);
+/* ------------------------------------------------------------------
+   Global Readability Improvements
+   ------------------------------------------------------------------ */
+.section-intro {
+    max-width: 700px;
+    margin: 0 auto;
+    color: var(--clr-text-light);
+    font-size: 1.15rem;
+    line-height: 1.8;
 }
 
-.page-heading .hero-subtitle.dark {
-    color: var(--clr-text);
+/* Default paragraph readability inside sections */
+.inner-page section p {
+    line-height: 1.85;
+}
+
+/* Increase overall section padding slightly for more breathing room */
+.py-100 {
+    padding: 6rem 0;
 }
 
 /* ==========================================================================
