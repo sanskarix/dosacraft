@@ -14,7 +14,7 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Oswald:wght@500;600;700&display=swap"
         rel="stylesheet">
     <!-- CSS -->
-    <link rel="stylesheet" href="css/styles.css?v=2.0">
+    <link rel="stylesheet" href="css/styles.css?v=4.0">
 </head>
 
 <body>
@@ -39,22 +39,23 @@
 
     <main class="inner-page">
         <!-- Brand Intro Header -->
-        <section class="about-hero-section relative overflow-hidden section-bg-dark">
+        <section class="about-hero-section relative overflow-hidden bg-base">
             <div class="container text-center fade-up pt-100 pb-100 relative z-2">
                 <p class="premium-accent-text mb-2 text-primary"
                     style="font-family: 'Great Vibes', cursive; font-size: 2.5rem; color: var(--clr-accent);">Discover
                 </p>
-                <h1 class="hero-title text-white">The Art of <span class="highlight">Dosa Craft</span></h1>
-                <p class="hero-subtitle mx-auto mt-4 text-white" style="max-width: 800px; opacity: 0.9;">Reinventing
+                <h1 class="hero-title text-text">The Art of <span class="highlight">Dosa Craft</span></h1>
+                <p class="hero-subtitle mx-auto mt-4 text-text-light" style="max-width: 800px; opacity: 0.9;">
+                    Reinventing
                     traditional dosa by
                     combining authentic South Indian flavors with modern culinary craft.</p>
             </div>
             <!-- Cinematic Background -->
             <div style="position:absolute; inset:0; z-index: 1;">
                 <img src="assets/images/about-hero-tawa.png" alt="Traditional Tawa"
-                    style="width: 100%; height: 100%; object-fit: cover; opacity: 0.35;">
+                    style="width: 100%; height: 100%; object-fit: cover; opacity: 0.25;">
                 <div
-                    style="position:absolute; inset:0; background: linear-gradient(to bottom, rgba(17,17,17,0.8), rgba(17,17,17,1));">
+                    style="position:absolute; inset:0; background: linear-gradient(to bottom, rgba(253,249,241,0.6), rgba(253,249,241,1));">
                 </div>
             </div>
         </section>
@@ -122,15 +123,16 @@
             </div>
         </section>
 
-        <!-- Vision, Mission & Philosophy (Dark Immersive Section) -->
-        <section class="philosophy-section py-100 relative section-bg-dark">
+        <!-- Vision, Mission & Philosophy (Immersive Section) -->
+        <section class="philosophy-section py-100 relative">
             <div class="container relative z-2">
 
                 <div class="vision-mission-grid mb-100 fade-up">
                     <div class="vm-card">
                         <div class="vm-icon">🔭</div>
-                        <h3 class="vm-title">Our Vision</h3>
-                        <p>To build a globally recognized dosa brand that delivers exceptional taste, quality, and
+                        <h3 class="vm-title" style="color: var(--clr-text);">Our Vision</h3>
+                        <p style="color: var(--clr-text-light);">To build a globally recognized dosa brand that delivers
+                            exceptional taste, quality, and
                             customer experience while setting new standards in South Indian fusion cuisine.</p>
                     </div>
 
@@ -138,8 +140,9 @@
 
                     <div class="vm-card">
                         <div class="vm-icon">🎯</div>
-                        <h3 class="vm-title">Our Mission</h3>
-                        <p>To serve innovative South Indian fusion dishes inspired by authentic traditions, providing
+                        <h3 class="vm-title" style="color: var(--clr-text);">Our Mission</h3>
+                        <p style="color: var(--clr-text-light);">To serve innovative South Indian fusion dishes inspired
+                            by authentic traditions, providing
                             healthier alternatives while maintaining uncompromising standards of food quality and
                             service.</p>
                     </div>
@@ -148,10 +151,12 @@
                 <div class="philosophy-grid fade-up">
                     <div class="philosophy-content">
                         <p class="subtitle-label text-accent">Philosophy</p>
-                        <h2 class="section-title text-white text-left mb-4">Quality & Taste</h2>
-                        <p class="text-gray-300 lead-text mb-4">Dosa Craft places strong emphasis on maintaining
+                        <h2 class="section-title text-left mb-4">Quality & Taste</h2>
+                        <p class="lead-text mb-4" style="color: var(--clr-text);">Dosa Craft places strong emphasis on
+                            maintaining
                             consistent quality and taste across all its food offerings.</p>
-                        <p class="text-gray-400">Food preparation is based on carefully developed recipes and
+                        <p style="color: var(--clr-text-light);">Food preparation is based on carefully developed
+                            recipes and
                             standardized processes. Key principles include:</p>
                         <div class="flex flex-wrap gap-3 mt-4">
                             <span class="g-tag">Standardized Recipes</span>
@@ -177,49 +182,55 @@
         </section>
 
         <!-- What Makes Us Unique -->
-        <section class="about-unique-section py-100 section-bg-dark">
+        <section class="about-unique-section py-100">
             <div class="container">
-                <h2 class="section-title text-white fade-up text-center mb-5">What Makes Dosa Craft Unique</h2>
+                <h2 class="section-title fade-up text-center mb-5">What Makes Dosa Craft Unique</h2>
                 <div class="staggered-unique-grid mt-5">
                     <div class="unique-card-staggered fade-up glow-card" data-speed="0.9">
                         <div class="unique-number font-heading text-gold opacity-50 text-4xl mb-2">01</div>
-                        <h3 class="text-white text-xl mb-2">Fusion Innovation</h3>
-                        <p class="text-gray-400 text-sm">Creative dosa varieties inspired by global cuisines and bold
+                        <h3 class="text-xl mb-2" style="color: var(--clr-text);">Fusion Innovation</h3>
+                        <p class="text-sm" style="color: var(--clr-text-light);">Creative dosa varieties inspired by
+                            global cuisines and bold
                             flavors.</p>
                     </div>
                     <div class="unique-card-staggered fade-up glow-card" data-speed="1.1"
                         style="transition-delay: 0.1s;">
                         <div class="unique-number font-heading text-gold opacity-50 text-4xl mb-2">02</div>
-                        <h3 class="text-white text-xl mb-2">Expansive Variety</h3>
-                        <p class="text-gray-400 text-sm">A vast menu spanning from comforting traditional classics to
+                        <h3 class="text-xl mb-2" style="color: var(--clr-text);">Expansive Variety</h3>
+                        <p class="text-sm" style="color: var(--clr-text-light);">A vast menu spanning from comforting
+                            traditional classics to
                             daring unique fusions.</p>
                     </div>
                     <div class="unique-card-staggered fade-up glow-card" data-speed="0.85"
                         style="transition-delay: 0.2s;">
                         <div class="unique-number font-heading text-gold opacity-50 text-4xl mb-2">03</div>
-                        <h3 class="text-white text-xl mb-2">Unwavering Consistency</h3>
-                        <p class="text-gray-400 text-sm">Standardized preparation methods ensuring every bite maintains
+                        <h3 class="text-xl mb-2" style="color: var(--clr-text);">Unwavering Consistency</h3>
+                        <p class="text-sm" style="color: var(--clr-text-light);">Standardized preparation methods
+                            ensuring every bite maintains
                             our signature taste and quality.</p>
                     </div>
                     <div class="unique-card-staggered fade-up glow-card" data-speed="1.05"
                         style="transition-delay: 0.3s;">
                         <div class="unique-number font-heading text-gold opacity-50 text-4xl mb-2">04</div>
-                        <h3 class="text-white text-xl mb-2">Modern Presentation</h3>
-                        <p class="text-gray-400 text-sm">Food designed not just for the palate, but to be visually
+                        <h3 class="text-xl mb-2" style="color: var(--clr-text);">Modern Presentation</h3>
+                        <p class="text-sm" style="color: var(--clr-text-light);">Food designed not just for the palate,
+                            but to be visually
                             stunning and exciting.</p>
                     </div>
                     <div class="unique-card-staggered fade-up glow-card" data-speed="0.95"
                         style="transition-delay: 0.4s;">
                         <div class="unique-number font-heading text-gold opacity-50 text-4xl mb-2">05</div>
-                        <h3 class="text-white text-xl mb-2">Contemporary Atmosphere</h3>
-                        <p class="text-gray-400 text-sm">Outlets architecturally designed with a modern look and deeply
+                        <h3 class="text-xl mb-2" style="color: var(--clr-text);">Contemporary Atmosphere</h3>
+                        <p class="text-sm" style="color: var(--clr-text-light);">Outlets architecturally designed with a
+                            modern look and deeply
                             comfortable seating.</p>
                     </div>
                     <div class="unique-card-staggered fade-up glow-card" data-speed="1.15"
                         style="transition-delay: 0.5s;">
                         <div class="unique-number font-heading text-gold opacity-50 text-4xl mb-2">06</div>
-                        <h3 class="text-white text-xl mb-2">Authentic Ingredients</h3>
-                        <p class="text-gray-400 text-sm">Sourcing the finest regional spices and produce for true South
+                        <h3 class="text-xl mb-2" style="color: var(--clr-text);">Authentic Ingredients</h3>
+                        <p class="text-sm" style="color: var(--clr-text-light);">Sourcing the finest regional spices and
+                            produce for true South
                             Indian taste.</p>
                     </div>
                 </div>
@@ -228,7 +239,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" style="background-color: #242424;">
         <div class="container">
             <div class="footer-container">
                 <div class="footer-brand">
