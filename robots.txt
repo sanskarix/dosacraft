@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dosacraft.in/sitemap.xml

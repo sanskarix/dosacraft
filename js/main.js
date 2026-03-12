@@ -10,7 +10,6 @@ class SiteAnimations {
         this.initMobileNav();
         this.initScrollHeader();
         this.initMenuFilter();
-        this.initContactOutlets();
     }
 
     /**
@@ -293,82 +292,6 @@ class SiteAnimations {
         });
     }
 
-    /**
-     * Initialize Contact Page Outlet Selector
-     */
-    initContactOutlets() {
-        const outletBtns = document.querySelectorAll('.outlet-btn');
-        if (outletBtns.length === 0) return;
-
-        const outlets = {
-            palasia: {
-                name: "Indore - Palasia",
-                address: "Near Palasia Square, AB Road<br>Indore, Madhya Pradesh 452001",
-                hours: "Monday - Sunday<br>11:00 AM - 11:00 PM",
-                phone: "+91 731 250 1234",
-                phoneLink: "+917312501234",
-                mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3680.1766741959!2d75.8655!3d22.7196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962fd001f4d0001%3A0x0!2sPalasia%20Square%2C%20Indore%2C%20Madhya%20Pradesh!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
-            },
-            vijaynagar: {
-                name: "Indore - Vijay Nagar",
-                address: "Scheme No 54, Vijay Nagar<br>Indore, Madhya Pradesh 452010",
-                hours: "Monday - Sunday<br>10:00 AM - 11:30 PM",
-                phone: "+91 731 250 5678",
-                phoneLink: "+917312505678",
-                mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3679.5!2d75.895!3d22.755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sVijay%20Nagar%2C%20Indore!5e0!3m2!1sen!2sin!4v1700000000001!5m2!1sen!2sin"
-            },
-            bhanwarkuan: {
-                name: "Indore - Bhanwarkuan",
-                address: "Bhanwarkuan Main Road<br>Indore, Madhya Pradesh 452001",
-                hours: "Tuesday - Sunday<br>11:00 AM - 10:30 PM",
-                phone: "+91 731 250 9012",
-                phoneLink: "+917312509012",
-                mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3681.5!2d75.865!3d22.695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sBhanwarkuan%2C%20Indore!5e0!3m2!1sen!2sin!4v1700000000002!5m2!1sen!2sin"
-            }
-        };
-
-        const addressEl = document.getElementById('contact-address');
-        const hoursEl = document.getElementById('contact-hours');
-        const phoneEl = document.getElementById('contact-phone');
-        const phoneLinkEl = document.getElementById('contact-phone-link');
-        const waLinkEl = document.getElementById('contact-wa-link');
-        const mapEl = document.getElementById('contact-map');
-        const nameEl = document.getElementById('contact-outlet-name');
-
-        outletBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                outletBtns.forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-
-                const data = outlets[btn.getAttribute('data-outlet')];
-
-                // Animate content change
-                gsap.to([addressEl, hoursEl, phoneEl, nameEl], {
-                    opacity: 0,
-                    y: 10,
-                    duration: 0.2,
-                    onComplete: () => {
-                        if (nameEl) nameEl.textContent = data.name;
-                        if (addressEl) addressEl.innerHTML = data.address;
-                        if (hoursEl) hoursEl.innerHTML = data.hours;
-                        const phoneSpan = document.getElementById('contact-phone');
-                        if (phoneSpan) phoneSpan.textContent = data.phone;
-                        if (phoneLinkEl) phoneLinkEl.href = `tel:${data.phoneLink}`;
-                        if (waLinkEl) waLinkEl.href = `https://wa.me/${data.phoneLink.replace('+', '')}`;
-
-                        gsap.to([addressEl, hoursEl, phoneSpan, nameEl].filter(Boolean), {
-                            opacity: 1,
-                            y: 0,
-                            duration: 0.3
-                        });
-                    }
-                });
-
-                // Update map instantly if exists
-                if (mapEl) mapEl.src = data.mapSrc;
-            });
-        });
-    }
 }
 
 // Add CSS keyframes for nav links dynamically
