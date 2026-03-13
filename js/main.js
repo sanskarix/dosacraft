@@ -175,11 +175,30 @@ class SiteAnimations {
                     });
                 }
             });
+
+            // 4. Zoom and Fade out main dosa image on scroll
+            const mainDosaVector = document.querySelector('.dosa-vector');
+            if (mainDosaVector) {
+                gsap.to(mainDosaVector, {
+                    scale: 1.5,
+                    opacity: 0,
+                    ease: "none",
+                    scrollTrigger: {
+                        trigger: heroSection,
+                        start: "top top",
+                        end: "bottom top",
+                        scrub: true,
+                        invalidateOnRefresh: true
+                    }
+                });
+            }
         }
 
-        // 2. Fade Up Elements on Scroll
-        const fadeElements = document.querySelectorAll('.fade-up');
-        fadeElements.forEach((el) => {
+        // 2. Fade Up Elements on Scroll (Optimized for grids)
+        
+        // Handle standalone fade-up elements
+        const standaloneElements = document.querySelectorAll('.fade-up:not(.features-grid .fade-up):not(.philosophy-grid .fade-up):not(.home-section-grid .fade-up):not(.plates-grid .fade-up)');
+        standaloneElements.forEach((el) => {
             gsap.fromTo(el,
                 {
                     y: 50,
@@ -192,7 +211,33 @@ class SiteAnimations {
                     ease: "power2.out",
                     scrollTrigger: {
                         trigger: el,
-                        start: "top 85%", // Trigger when element is 85% down the viewport
+                        start: "top 85%",
+                        toggleActions: "play none none reverse"
+                    }
+                }
+            );
+        });
+
+        // Handle grid containers (animate children in rows/staggered)
+        const gridContainers = document.querySelectorAll('.features-grid, .philosophy-grid, .home-section-grid, .plates-grid');
+        gridContainers.forEach(container => {
+            const cards = container.querySelectorAll('.fade-up');
+            if(cards.length === 0) return;
+            
+            gsap.fromTo(cards,
+                {
+                    y: 50,
+                    opacity: 0
+                },
+                {
+                    y: 0,
+                    opacity: 1,
+                    duration: 0.8,
+                    stagger: 0.1, // Stagger effect for items in the same container
+                    ease: "power2.out",
+                    scrollTrigger: {
+                        trigger: container,
+                        start: "top 80%", // Trigger when the *container* enters the viewport
                         toggleActions: "play none none reverse"
                     }
                 }

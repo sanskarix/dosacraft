@@ -16,8 +16,8 @@
     /* Richer Turmeric/Saffron Yellow (Updated to #d98f3a) */
     --clr-gold: #d98f3a;
     /* Premium Gold Accent (Updated to match accent) */
-    --clr-accent-deep: #D9381E;
-    /* Kumkum/Vermilion Red */
+    --clr-accent-deep: #C44536;
+    /* Earthy Terracotta/Brick Red */
     --clr-text: #3A3A3A;
     --clr-text-light: #666666;
     --clr-white: #ffffff;
@@ -37,12 +37,12 @@
     --heading-2: clamp(2rem, 4vw, 3rem);
     --heading-3: clamp(1.5rem, 3vw, 2.2rem);
 
-    /* Spacing & Layout */
-    --space-sm: 0.5rem;
-    --space-md: 1rem;
-    --space-lg: 2rem;
-    --space-xl: 4rem;
-    --space-xxl: 7rem;
+    /* Responsive Spacing & Layout */
+    --space-sm: clamp(0.5rem, 1vw, 0.75rem);
+    --space-md: clamp(1rem, 2vw, 1.25rem);
+    --space-lg: clamp(1.5rem, 3vw, 2.5rem);
+    --space-xl: clamp(2.5rem, 5vw, 4rem);
+    --space-xxl: clamp(4rem, 8vw, 6rem);
     --container-max: 1200px;
     --radius: 50px;
     /* Pill shape */
@@ -151,7 +151,7 @@ img {
     font-size: var(--heading-2);
     text-align: center;
     margin-top: 0;
-    margin-bottom: var(--space-xl);
+    margin-bottom: clamp(1.5rem, 3vw, 2.5rem);
     text-transform: uppercase;
 }
 
@@ -176,7 +176,7 @@ img {
 }
 
 .mb-5 {
-    margin-bottom: 4rem;
+    margin-bottom: var(--space-xxl);
 }
 
 .mx-auto {
@@ -230,26 +230,28 @@ img {
 }
 
 /* ==========================================================================
-   Home Page Rhythm
+   Home Page Rhythm (Also applies to internal pages)
    ========================================================================== */
-.home-main {
-    --home-section-space: clamp(4.5rem, 8vw, 7rem);
-    --home-section-space-compact: clamp(3.5rem, 6vw, 5.5rem);
-    --home-section-gap: clamp(2rem, 4vw, 3.5rem);
+.home-main, .inner-page {
+    --home-section-space: clamp(4rem, 6vw, 6rem);
+    --home-section-space-compact: clamp(3rem, 5vw, 4.5rem);
+    --home-section-gap: clamp(1.5rem, 3vw, 2.5rem);
 }
 
-.home-main .home-section {
+.home-main .home-section, .inner-page .home-section {
     padding-block: var(--home-section-space);
 }
 
-.home-main .home-section--compact {
+.home-main .home-section--compact, .inner-page .home-section--compact {
     padding-block: var(--home-section-space-compact);
 }
 
 .home-section-header {
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 1rem;
-    margin-bottom: var(--home-section-gap);
+    margin-bottom: clamp(2.5rem, 4vw, 4rem);
 }
 
 .home-section-header .section-title {
@@ -322,7 +324,7 @@ img {
 .btn-primary:hover {
     background-color: var(--clr-primary-light);
     transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(217, 56, 30, 0.2);
+    box-shadow: 0 10px 20px rgba(196, 69, 54, 0.2);
 }
 
 .btn-secondary {
@@ -335,8 +337,18 @@ img {
     background-color: var(--clr-accent-deep);
     color: var(--clr-bg);
     transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(217, 56, 30, 0.1);
+    box-shadow: 0 10px 20px rgba(196, 69, 54, 0.15);
 }
+
+/* Specific Button Positioning Fixes */
+.story-cta {
+    margin-top: 2rem;
+}
+
+.menu-btn-container {
+    margin-top: 3.5rem;
+}
+
 
 /* ==========================================================================
    Header & Navigation
@@ -347,7 +359,7 @@ img {
     left: 0;
     width: 100%;
     z-index: 100;
-    padding: 1.5rem 0;
+    padding: clamp(1.5rem, 3vw, 2.5rem) 0;
     transition: var(--transition);
 }
 
@@ -577,7 +589,7 @@ img {
 }
 
 .hero-subtitle {
-    font-size: var(--text-md);
+    font-size: clamp(1.125rem, 2vw, 1.5rem);
     color: var(--clr-text-light);
     max-width: 600px;
     margin: 0 auto;
@@ -666,7 +678,7 @@ img {
 
 .hero-visual {
     position: absolute;
-    bottom: 0%;
+    bottom: 8px;
     left: 50%;
     transform: translateX(-50%);
     width: clamp(400px, 90vw, 1000px);
@@ -685,7 +697,7 @@ img {
    Home Page - Features (What Makes Dosa Craft Unique)
    ========================================================================== */
 .features-section {
-    padding: var(--space-xxl) 0;
+    padding: var(--space-xl) 0 var(--space-lg);
 }
 
 .features-grid {
@@ -707,10 +719,8 @@ img {
 }
 
 .feature-card {
-    background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    padding: var(--space-xl);
+    background: rgba(255, 255, 255, 0.9);
+    padding: clamp(1.5rem, 3vw, 2.25rem);
     border-radius: var(--radius-card);
     border: 1px solid rgba(212, 175, 55, 0.2);
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
@@ -766,7 +776,7 @@ img {
    Food Carousel
    ========================================================================== */
 .food-carousel-section {
-    padding: var(--space-xxl) 0 var(--space-xl);
+    padding: var(--space-xl) 0 var(--space-xxl);
     overflow: hidden;
 }
 
@@ -928,26 +938,55 @@ img {
     margin-bottom: 1rem;
 }
 
-.philosophy-list {
-    list-style: none;
-    padding: 0;
-    margin: 1rem 0;
+.philosophy-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: clamp(2rem, 4vw, 3rem);
+    margin-bottom: clamp(1.5rem, 3vw, 2rem);
 }
 
-.philosophy-list li {
-    padding: 0.6rem 0 0.6rem 2rem;
-    position: relative;
-    font-size: 1.05rem;
-    color: var(--clr-text);
+.phil-card {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.875rem 1.25rem;
+    flex: 1 1 calc(50% - 0.375rem);
+    min-width: 200px;
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid var(--clr-border);
+    border-radius: var(--radius-card);
+    transition: var(--transition);
 }
 
-.philosophy-list li::before {
-    content: '✓';
-    position: absolute;
-    left: 0;
-    color: var(--clr-primary);
-    font-weight: 700;
-    font-size: 1.2rem;
+.phil-card:hover {
+    background: var(--clr-white);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    border-color: var(--clr-accent);
+}
+
+.phil-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: var(--clr-primary);
+    color: var(--clr-accent);
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.phil-icon svg {
+    width: 18px;
+    height: 18px;
+}
+
+.phil-text {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--clr-secondary);
 }
 
 .philosophy-image img {
@@ -997,10 +1036,10 @@ img {
 
 .testimonial-card {
     flex-shrink: 0;
-    width: 350px;
+    width: 320px;
     white-space: normal;
     background: var(--clr-white);
-    padding: var(--space-xl);
+    padding: clamp(1.25rem, 2.5vw, 1.75rem);
     border-radius: var(--radius-card);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
     transition: var(--transition);
@@ -1052,7 +1091,7 @@ img {
    Home Page - Signature Plates
    ========================================================================== */
 .signature-plates {
-    padding: var(--space-xxl) 0;
+    padding: var(--space-xl) 0 var(--space-xxl);
 }
 
 .plates-grid {
@@ -1242,26 +1281,17 @@ img {
 
 .visit-detail-row {
     display: flex;
-    align-items: flex-start;
-    gap: 0.85rem;
+    align-items: center;
+    gap: 1rem;
 }
 
 .visit-detail-row svg {
     flex-shrink: 0;
-    margin-top: 0.2rem;
     color: var(--clr-accent);
-    opacity: 0.9;
+    opacity: 1;
 }
 
-.visit-detail-label {
-    font-family: var(--font-heading);
-    font-size: 0.72rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: rgba(255, 255, 255, 0.5);
-    margin-bottom: 0.2rem;
-}
+
 
 .visit-detail-value {
     font-size: 0.975rem;
@@ -1385,7 +1415,7 @@ img {
        - Home: header (80px inner-page offset) + hero-content padding-top (12vh)
        - Inner: these 2rem bring the label+title block to roughly the same Y
     */
-    padding: 4rem 0 5rem;
+    padding: 3.5rem 0 3.5rem;
     position: relative;
     overflow: hidden;
 }
@@ -1441,7 +1471,7 @@ img {
 
 /* Subtitle paragraph */
 .page-hero-subtitle {
-    max-width: 620px;
+    max-width: 800px;
     margin: 0 auto;
     font-size: 1.15rem;
     color: var(--clr-text-light);
@@ -1470,7 +1500,7 @@ img {
    Global Readability Improvements
    ------------------------------------------------------------------ */
 .section-intro {
-    max-width: 700px;
+    max-width: 850px;
     margin: 0 auto;
     color: var(--clr-text-light);
     font-size: 1.15rem;
@@ -1482,9 +1512,9 @@ img {
     line-height: 1.85;
 }
 
-/* Increase overall section padding slightly for more breathing room */
+/* Default padding for inner-page sections */
 .py-100 {
-    padding: 6rem 0;
+    padding: clamp(4rem, 6vw, 5.5rem) 0;
 }
 
 /* ==========================================================================
@@ -1496,7 +1526,7 @@ img {
 
 /* Category Filter Buttons */
 .menu-filter-section {
-    padding: 0 0 var(--space-xl);
+    padding: 0 0 calc(var(--space-xl) * 1.5);
 }
 
 .category-filters {
@@ -1530,7 +1560,7 @@ img {
 .menu-category {
     margin-bottom: var(--space-xl);
     background: var(--clr-white);
-    padding: var(--space-lg) var(--space-xl);
+    padding: var(--space-lg) var(--space-lg);
     border-radius: var(--radius-card);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
     transition: opacity 0.3s ease, transform 0.3s ease;
@@ -1619,6 +1649,7 @@ img {
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.05em;
+    margin-left: 0.5rem;
 }
 
 .menu-item-desc {
@@ -1977,7 +2008,7 @@ img {
     font-size: 0.85rem;
     font-weight: 700;
     color: var(--clr-gold);
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     display: inline-block;
 }
 
@@ -2401,7 +2432,7 @@ img {
 .contact-info-panel {
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: 2rem;
     padding: 1rem 0;
 }
 
@@ -2484,6 +2515,10 @@ img {
     gap: 1.5rem;
 }
 
+.premium-form .form-group {
+    margin-bottom: 0;
+}
+
 .premium-form input,
 .premium-form textarea {
     width: 100%;
@@ -2523,7 +2558,7 @@ img {
 .footer {
     background-color: var(--clr-secondary);
     color: var(--clr-bg);
-    padding: var(--space-xxl) 0 2rem;
+    padding: var(--space-xxl) 0 var(--space-xxl);
     position: relative;
     overflow: hidden;
     border-top: 4px solid var(--clr-gold);
