@@ -515,11 +515,12 @@ img {
     position: absolute;
     width: 600px;
     height: 600px;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' width='600' height='600'%3E%3Cg stroke='%23D4AF37' fill='none' stroke-width='0.5' opacity='0.25'%3E%3Ccircle cx='100' cy='100' r='80'/%3E%3Ccircle cx='100' cy='100' r='60'/%3E%3Ccircle cx='100' cy='100' r='40'/%3E%3Ccircle cx='100' cy='100' r='90'/%3E%3Cpath d='M100 0 L100 200 M0 100 L200 100'/%3E%3Cpath d='M29.289 29.289 L170.71 170.71 M29.289 170.71 L170.71 29.289'/%3E%3Cpath d='M100 10 Q 130 50 190 100 Q 130 150 100 190 Q 70 150 10 100 Q 70 50 100 10'/%3E%3Cpath d='M100 40 Q 115 70 160 100 Q 115 130 100 160 Q 85 130 40 100 Q 85 70 100 40'/%3E%3Ccircle cx='100' cy='10' r='3' fill='%23D4AF37'/%3E%3Ccircle cx='190' cy='100' r='3' fill='%23D4AF37'/%3E%3Ccircle cx='100' cy='190' r='3' fill='%23D4AF37'/%3E%3Ccircle cx='10' cy='100' r='3' fill='%23D4AF37'/%3E%3C/g%3E%3C/svg%3E");
+    background-image: url("../assets/images/mandala.svg");
     background-repeat: no-repeat;
     background-size: contain;
     z-index: 0;
     pointer-events: none;
+    opacity: 0.25;
 }
 
 .hero::before {
@@ -1168,18 +1169,15 @@ img {
     overflow: hidden;
 }
 
-/* Kolam watermark for visual richness — mirrors the page-hero decoration */
+/* Subtle wavy lines watermark */
 .visit-us::before {
     content: '';
     position: absolute;
-    top: 50%;
-    right: -12%;
-    transform: translateY(-50%);
-    width: 560px;
-    height: 560px;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' width='560' height='560'%3E%3Cg stroke='%23ffffff' fill='none' stroke-width='0.4' opacity='0.06'%3E%3Ccircle cx='100' cy='100' r='80'/%3E%3Ccircle cx='100' cy='100' r='60'/%3E%3Ccircle cx='100' cy='100' r='40'/%3E%3Ccircle cx='100' cy='100' r='95'/%3E%3Cpath d='M100 0 L100 200 M0 100 L200 100'/%3E%3Cpath d='M29.289 29.289 L170.71 170.71 M29.289 170.71 L170.71 29.289'/%3E%3C/g%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-size: contain;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 30' width='60' height='30'%3E%3Cpath d='M 0 15 Q 15 0 30 15 T 60 15' fill='none' stroke='%23ffffff' stroke-width='1.5' opacity='0.08'/%3E%3C/svg%3E");
+    background-repeat: repeat;
     pointer-events: none;
     z-index: 0;
 }
@@ -1388,9 +1386,7 @@ img {
     }
 
     .visit-us::before {
-        right: 50%;
-        transform: translate(50%, -50%);
-        opacity: 0.04;
+        opacity: 0.6;
     }
 }
 
@@ -2569,12 +2565,13 @@ img {
     right: -10%;
     width: 600px;
     height: 600px;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='none' stroke='%23D4AF37' stroke-width='1' opacity='0.05'%3E%3Ccircle cx='50' cy='50' r='45' stroke-width='2'/%3E%3Ccircle cx='50' cy='50' r='35'/%3E%3Cpath d='M50 5 L55 35 L85 50 L55 65 L50 95 L45 65 L15 50 L45 35 Z' fill='%23D4AF37' fill-opacity='0.05'/%3E%3Cpath d='M50 15 L58 42 L85 50 L58 58 L50 85 L42 58 L15 50 L42 42 Z'/%3E%3C/svg%3E");
+    background-image: url("../assets/images/mandala.svg");
     background-repeat: no-repeat;
     background-size: contain;
     z-index: 0;
     pointer-events: none;
     animation: spinSlow 120s linear infinite;
+    opacity: 0.05;
 }
 
 .footer-container {
