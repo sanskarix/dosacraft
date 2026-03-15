@@ -12,9 +12,9 @@
     --clr-primary-light: #228c55;
     --clr-secondary: #242424;
     /* Richer Charcoal/Black */
-    --clr-accent: #d98f3a;
-    /* Richer Turmeric/Saffron Yellow (Updated to #d98f3a) */
-    --clr-gold: #d98f3a;
+    --clr-accent: #f59a23;
+    /* Richer Turmeric/Saffron Yellow (Updated to #f59a23) */
+    --clr-gold: #f59a23;
     /* Premium Gold Accent (Updated to match accent) */
     --clr-accent-deep: #C44536;
     /* Earthy Terracotta/Brick Red */
@@ -1095,7 +1095,7 @@ img {
 
 .plates-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
     gap: var(--space-xl);
 }
 
@@ -1217,7 +1217,7 @@ img {
     overflow: hidden;
     border: 3px solid rgba(255, 255, 255, 0.15);
     box-shadow:
-        0 0 0 1px rgba(217, 143, 58, 0.3),
+        0 0 0 1px rgba(245, 154, 35, 0.3),
         0 20px 50px rgba(0, 0, 0, 0.35);
 }
 
@@ -1244,7 +1244,7 @@ img {
     padding: 0.4rem 0.9rem;
     border-radius: 999px;
     background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(217, 143, 58, 0.5);
+    border: 1px solid rgba(245, 154, 35, 0.5);
     color: var(--clr-accent);
     font-family: var(--font-heading);
     font-size: var(--text-base);
@@ -1418,16 +1418,17 @@ img {
 .page-hero::before {
     content: '';
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: calc(50% - 300px);
+    left: calc(50% - 300px);
     width: 600px;
     height: 600px;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' width='600' height='600'%3E%3Cg stroke='%23d98f3a' fill='none' stroke-width='0.3' opacity='0.06'%3E%3Ccircle cx='100' cy='100' r='80'/%3E%3Ccircle cx='100' cy='100' r='60'/%3E%3Ccircle cx='100' cy='100' r='40'/%3E%3Ccircle cx='100' cy='100' r='90'/%3E%3Cpath d='M100 0 L100 200 M0 100 L200 100'/%3E%3Cpath d='M29.289 29.289 L170.71 170.71 M29.289 170.71 L170.71 29.289'/%3E%3C/g%3E%3C/svg%3E");
+    background-image: url("../assets/images/mandala.svg");
     background-repeat: no-repeat;
     background-size: contain;
     pointer-events: none;
     z-index: 0;
+    opacity: 0.15;
+    animation: spinSlow 90s linear infinite;
 }
 
 .page-hero .container {
@@ -1772,7 +1773,7 @@ img {
 /* Values Grid (Vision & Mission) */
 .values-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr));
     gap: var(--space-xl);
 }
 
@@ -1837,7 +1838,7 @@ img {
 
 .unique-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
     gap: var(--space-lg);
 }
 
@@ -2494,7 +2495,7 @@ img {
     padding: 3.5rem;
     border-radius: 24px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.05);
-    border: 1px solid rgba(217, 143, 58, 0.15);
+    border: 1px solid rgba(245, 154, 35, 0.15);
 }
 
 .premium-form {
@@ -2531,7 +2532,7 @@ img {
     outline: none;
     border-color: var(--clr-accent);
     background: var(--clr-white);
-    box-shadow: 0 0 0 4px rgba(217, 143, 58, 0.1);
+    box-shadow: 0 0 0 4px rgba(245, 154, 35, 0.1);
 }
 
 .full-map {
@@ -2958,12 +2959,39 @@ img {
     padding-bottom: var(--space-xxl) !important;
 }
 
+@media (max-width: 992px) {
+    .contact-premium-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 @media (max-width: 768px) {
-    .visit-grid {
+    .visit-grid,
+    .form-row {
         grid-template-columns: 1fr;
     }
 
     .footer-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+
+    .responsibilities-list > * {
+        flex-direction: column !important;
+        gap: 1.5rem !important;
+        text-align: center;
+        align-items: center !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-container {
         grid-template-columns: 1fr;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
     }
 }
